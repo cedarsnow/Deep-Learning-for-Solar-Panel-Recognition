@@ -287,7 +287,7 @@ ARCHITECTURE = smp.DeepLabV3Plus
 BACKBONE = 'efficientnet-b3'
 EPOCHS = 25
 DEVICE = 'cpu'
-model_path = f'models/{ARCHITECTURE.__name__.lower()}_{BACKBONE}_model_{EPOCHS}.pth'
+model_path = f'./models/{ARCHITECTURE.__name__.lower()}_{BACKBONE}_model_{EPOCHS}.pth'
 CLASSES = ['solar_panel']
 preprocess_input = smp.encoders.get_preprocessing_fn(BACKBONE)
 
@@ -308,7 +308,7 @@ with st.sidebar.subheader('Select the model you want to use for prediction'):
                                      model_options)
 
     model = models[models_code[model_sel]]
-    model_path = f'models/{model["ARCHITECTURE"].__name__.lower()}_{model["BACKBONE"]}_{model["EPOCHS"]}ep.pth'
+    model_path = f'./models/{model["ARCHITECTURE"].__name__.lower()}_{model["BACKBONE"]}_{model["EPOCHS"]}ep.pth'
     ARCHITECTURE = smp.DeepLabV3Plus
     BACKBONE = model['BACKBONE']
     EPOCHS = model['EPOCHS']
