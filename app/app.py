@@ -10,7 +10,7 @@ import torch
 import albumentations as A
 # from sklearn.metrics import jaccard_score
 import skimage.measure as km
-from matplotlib import pyplot as plt
+#from matplotlib import pyplot as plt
 
 import segmentation_models_pytorch as smp
 
